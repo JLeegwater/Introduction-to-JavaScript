@@ -17,7 +17,7 @@ Do the following:
 
    HINT: no function required
 */
-let votingAge =18;
+const votingAge =18;
 if(votingAge >=18)
 {
   console.log(true);
@@ -39,10 +39,8 @@ let var1 = 10;
 let var2 = 20;
 if(var2 >4)
 {
-  var1 = 18;
+  console.log( var1 = 18);
 }
-
-
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -54,8 +52,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let str = "1999"
+parseInt(str)
+console.log(str);
 
 
 /*
@@ -67,8 +66,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a*b;
   }
 
 
@@ -83,8 +82,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age *7;
 }
 
 
@@ -166,9 +165,12 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+let user = 1;
+const computer = Math.floor(Math.random()*3);
+game(user, computer);
 function game(user, computer){
-    /*add your code here*/
+    if(user === computer){return "it's a tie"}
+    return( user === computer%2 ?  "you win!": "you lose!");
 }
   
   
