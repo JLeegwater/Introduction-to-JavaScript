@@ -17,6 +17,11 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge =18;
+if(votingAge >=18)
+{
+  console.log(true);
+}
 
 
 
@@ -30,8 +35,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let var1 = 10; 
+let var2 = 20;
+if(var2 >4)
+{
+  var1 = 18;
+}
 
 
 
@@ -107,10 +116,34 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(weight, age){
     /*add your code here*/
+    if(age >1 && weight <= 5){
+      return weight *.05;
+    }
+    else if(age >1 && weight <= 5){
+      return weight *.05;
+    }
+    else if(age >=1 && weight >= 10 && weight <=10){
+      return weight *.04;
+    }
+    else if(age >=1 && weight >= 11 && weight <=15){
+      return weight *.03;
+    }
+    else if(age >=1 && weight >= 15){
+      return weight *.02;
+    }
+    else if(age <1 &&  age >=7/12){
+      return weight *.04;
+    }
+    else if(age <7/12 &&  age >=4/12){
+      return weight *.05;
+    }
+    else if(age <4/12 &&  age >=2/12){
+      return weight *.1;
+    }
   }
-
+  console.log(hungryDog(15,1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
