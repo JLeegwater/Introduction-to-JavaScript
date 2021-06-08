@@ -169,11 +169,24 @@ let user = 1;
 const computer = Math.floor(Math.random()*3);
 game(user, computer);
 function game(user, computer){
+  user =rpsToNum(user)
+  computer = rpsToNum(computer)
     if(user === computer){return "it's a tie"}
-    return( user === computer%2 ?  "you win!": "you lose!");
+    return( user === (computer+1)%3 ?  "you win!": "you lose!");
 }
-  
-  
+function rpsToNum(word){
+  switch (word) {
+    case "rock":
+      return 0;
+      break;
+    case "paper":
+      return 1;
+      break;
+     case "scissors":
+      return 2;
+      break;
+    }
+  }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -186,11 +199,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kM){
+    return kM * 0.621371;
   }
-
-
 
 //Task 5b - Feet to CM
 /*
@@ -200,8 +211,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(cM){
     /*add your code here*/
+    return cM /30.48;
   }
  
 
@@ -216,8 +228,9 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(startNum){
+  for(;startNum >0;startNum--)
+    return startNum + " bottles of soda on the wall, " + startNum + " bottles of soda, take one down pass it around " + (startNum-1) + " bottles of soda on the wall";
   }
 
 
@@ -236,8 +249,12 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score>=90){return "you got an A"}
+  if(score>=80){return "you got a B"}
+  if(score>=70){return "you got a C"}
+  if(score>=60){return "you got a D"}
+  if(score<60){return "you got an F"}
   }
   
   
