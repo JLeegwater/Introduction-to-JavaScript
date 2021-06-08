@@ -176,14 +176,11 @@ function game(user, computer){
 }
 function rpsToNum(word){
   switch (word) {
-    case "rock":
-      return 0;
+    case "rock":return 0;
       break;
-    case "paper":
-      return 1;
+    case "paper":return 1;
       break;
-     case "scissors":
-      return 2;
+    case "scissors":return 2;
       break;
     }
   }
@@ -250,11 +247,11 @@ Using the grade function below do the following:
 */
   
 function grade(score){
-  if(score>=90){return "you got an A"}
-  if(score>=80){return "you got a B"}
-  if(score>=70){return "you got a C"}
-  if(score>=60){return "you got a D"}
-  if(score<60){return "you got an F"}
+    if(score>=90){return "you got an A"}
+    if(score>=80){return "you got a B"}
+    if(score>=70){return "you got a C"}
+    if(score>=60){return "you got a D"}
+    if(score<60){return "you got an F"}
   }
   
   
@@ -272,10 +269,19 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(str) {
+  const vowels =['a','e','i','o','u'];
+  let num = 0;
+  vowels.forEach(element => {
+    
+    for(let c = 0; c< str.length;c++){
+      if(str[c] == element){num++}
+    }
+  });
+  return num;
 }
 
+console.log(vowelCounter("aaaabbbbbeee"));
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
